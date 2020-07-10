@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Alexander Votteler</title>
-
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Alexander Votteler</title>
+  
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+  
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  </head>
+  <script type="text/javascript">
+    function showdiv(x) {
+      var y = document.getElementById(x);
+      if (y.style.display === "none") {
+        document.getElementById('net').style.display = "none";
+        document.getElementById('med').style.display = "none";
+        document.getElementById('ver').style.display = "none";
+        y.style.display = "block";
+      } else {
+        y.style.display = "none";
+      }
+    } 
+  </script>
   <body>
     <div class="container">
       <object data="logo.svg" type="image/svg+xml"></object>
@@ -19,8 +32,19 @@
       <hr>
       <p>
         <strong>Leistungsspektrum:</strong><br>
-        Netzwerktechnik | Medientechnik | Veranstaltungstechnik
+        <a onclick="showdiv('net')" href="javascript:void(0);">Netzwerktechnik</a> | 
+        <a onclick="showdiv('med')" href="javascript:void(0);">Medientechnik</a> | 
+        <a onclick="showdiv('ver')" href="javascript:void(0);">Veranstaltungstechnik</a>
       </p>
+      <div id="net" style="display: none;">
+        Konzeption und Realisation von kleinen und mittleren Computernetzwerken, Aufbau von WLAN-Systemen, Netzwerktechnik für Veranstaltungen (WLAN-Hardware zur miete), Consulting für Aruba und Ubiquiti Netzwerkhardware
+      </div>
+      <div id="med" style="display: none;">
+        Konzeption und Realisation von medientechnischen Projekten, Systemintegration, Aufbau und Betreuung von Broadcast-Systemen, Consulting für vMix Videosoftware, Vortragsaufzeichnung für Großveranstaltungen
+      </div>
+      <div id="ver" style="display: none;">
+        Konzeption und Realisation von Beschallungstechnik für kleinere Veranstaltungen, Videotechnik, Betreuung von Medienservern (z.B. Catalyst Mac Media Server)
+      </div>
       <hr>
       <p>
         <strong>Kontakt:</strong><br>
