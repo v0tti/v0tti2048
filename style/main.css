@@ -710,3 +710,16 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+
+label[for^="toggle-"] {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input[id^="toggle-"], input[id^="toggle-"] + * {
+  display: none;
+}
+
+input[id^="toggle-"]:checked + * {
+  display: initial;
+}
